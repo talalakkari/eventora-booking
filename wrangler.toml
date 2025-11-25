@@ -1,0 +1,42 @@
+name = "eventora"
+main = "src/api/app.ts"
+compatibility_date = "2024-01-01"
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+
+[[durable_objects.bindings]]
+name = "REGISTRATIONS_DO"
+class_name = "RegistrationsDO"
+
+[[durable_objects.bindings]]
+name = "EVENTS_DO"
+class_name = "EventsDO"
+
+[[r2_buckets]]
+binding = "EVENT_IMAGES"
+bucket_name = "eventora-images"
+
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+persist = true
+head_sampling_rate = 1
+
+[[migrations]]
+tag = "v1"
+new_classes = ["RegistrationsDO"]
+
+[[migrations]]
+tag = "v2"
+new_classes = ["EventsDO"]
