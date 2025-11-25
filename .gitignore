@@ -39,6 +39,8 @@ logs/
 .kilocode/
 *.md
 !README.md
+!SECURITY.md
+!CODE_OF_CONDUCT.md
 
 # Temporary files
 *.tmp

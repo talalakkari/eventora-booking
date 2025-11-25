@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Live Demo
+    url: https://events.talalakkari.com
+    about: Try Eventora live
+  - name: Documentation
+    url: https://github.com/yourusername/eventora#readme
+    about: Read the documentation
